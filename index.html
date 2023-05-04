@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						clifford: '#da373d',
+					}
+				}
+			}
+		}
+	</script>
+	<title>Document</title>
+</head>
+
+<body class="h-screen bg-gray-800">
+	<div class="h-screen w-screen">
+		<div class="flex flex-col gap-4 items-center justify-center h-full w-full">
+			<div class="border-solid">
+				<p class="text-white font-bold text-center mb-3">Popup</p>
+				<button
+					class="text-white bg-green-700 font-bold py-2 px-6 rounded-md hover:bg-green-800 transition-all hover:scale-110"
+					data-popup>
+					Click Me 😛
+				</button>
+			</div>
+			<div class="border-solid">
+				<p class="text-white font-bold text-center mb-3">Modal</p>
+				<button
+					class="text-white bg-green-700 font-bold py-2 px-6 rounded-md hover:bg-green-800 transition-all hover:scale-110"
+					data-modal>
+					Click Me 😛
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/popup.js" type="module"></script>
+	<script src="assets/modal.js" type="module"></script>
+</body>
+
+</html>
