@@ -120,7 +120,7 @@ class Modal {
 		document.querySelector("button[data-confirm-modal]").addEventListener("click", async () => {
 			this.changeTextToConfirmButton();
 			try {
-				const response = await fetch("https://viacep.com.br/ws/01124030/json/");
+				const response = await fetch("https://viacep.com.br/ws/01142300/json/");
 				const data = await response.json();
 				this.confirmButtonElement.removeAttribute("disabled");
 				this.changeTextToConfirmButton(false, "finalizado!");
@@ -149,20 +149,9 @@ btnModal.addEventListener("click", (event) => {
 			title: "Title"
 		}
 	);
-	// modal.handleConfirmButton(function (obj) {
-	// 	fetch("https://viacep.com.br/ws/01124030/json/")
-	// 		.then(res => res.json())
-	// 		.then(data => {
-	// 			obj.confirmButtonElement.removeAttribute("disabled");
-	// 			console.log(data)
-	// 		})
-	// 		.catch(err => console.log(err))
-	// 		.finally(() => {
-	// 			obj.changeTextToConfirmButton(false, "finalizado!");
-	// 		});
-
-	// });
 	modal.handleConfirmButton(function (data) {
 		console.log("🚀 ~ file: modal.js:158 ~ data:", data);
 	});
+
 });
+
